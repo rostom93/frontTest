@@ -10,6 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class DashbordComponent implements OnInit {
   users:any
   numberOfUsers : number
+  user : string = localStorage.getItem("username")
   constructor(private readonly userService: ApiService) { }
 
   ngOnInit() {
@@ -19,6 +20,7 @@ export class DashbordComponent implements OnInit {
         this.numberOfUsers = res.data.length
       }
     )
+
   }
 
   settings = {
@@ -35,15 +37,15 @@ export class DashbordComponent implements OnInit {
     },
     columns: {
       name: {
-        title: 'Matricule',
+        title: 'Name',
         type: 'string',
       },
       email: {
-        title: 'Nom',
+        title: 'Email',
         type: 'string',
       },
       gender: {
-        title: 'Prénom',
+        title: 'Gender',
         type: 'string',
       },
      }

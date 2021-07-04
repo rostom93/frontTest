@@ -9,7 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './components/welcome/welcome.component'; 
 import { DashbordComponent } from './components/dashboard/dashboard.component';
 import { CarouselComponent } from './components/welcome/carousel/carousel.component';
-import { LoginComponent } from './components/welcome/login/login.component'; 
+import { LoginComponent } from './components/welcome/login/login.component';
+import { StatComponent } from './components/dashboard/stat/stat.component'; 
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { LoginComponent } from './components/welcome/login/login.component';
     DashbordComponent,
     CarouselComponent,
     LoginComponent,
+    StatComponent,
     
   ],
   imports: [
@@ -25,7 +28,8 @@ import { LoginComponent } from './components/welcome/login/login.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-   Ng2SmartTableModule
+   Ng2SmartTableModule,
+   ChartsModule
    
   ],
   providers: [],
